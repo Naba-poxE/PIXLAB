@@ -52,7 +52,7 @@ class PhotoGallery{
         item.innerHTML = `
         <a href='${photo.src.original}' target="_blank">
           <img src="${photo.src.medium}">
-          <h3>${photo.photographer}</h3>
+          <h3 style="background-color: ${photo.avg_color};">${photo.photographer}</h3>
         </a>
         `;
         this.galleryDIv.appendChild(item)
