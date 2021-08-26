@@ -89,7 +89,30 @@
         </div>
     </section>
 
+    <script type="text/javascript">
+        document.onclick = function (e) {
+            e = e || window.event;
+            var element = e.target || e.srcElement;
+            if (element.innerHTML == "Image") {
+                //someFunction(element.href);
+                var name = element.nameProp;
+                var address = element.href;
+                saveImageAs1(element.nameProp, element.href);
+                return false; // Prevent default action and stop event propagation
+            }
+            else
+                return true;
+        };
 
+        function saveImageAs1(name, adress) {
+            if (confirm('you wanna save this image?')) {
+                window.win = open(adress);
+                //response.redirect("~/testpage.html");
+                setTimeout('win.document.execCommand("SaveAs")', 100);
+                setTimeout('win.close()', 500);
+            }
+        }
+    </script>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
