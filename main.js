@@ -28,7 +28,7 @@ class PhotoGallery{
     }
     async getImg(index){
       this.loadMore.setAttribute('data-img', 'curated');
-      const baseURL = `https://api.pexels.com/v1/curated?page=${index}&per_page=12`;
+      const baseURL = `https://api.pexels.com/v1/curated?page=${index}&per_page=100`;
       const data = await this.fetchImages(baseURL);
       this.GenerateHTML(data.photos)
       console.log(data)
