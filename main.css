@@ -79,7 +79,7 @@ header  ul li a
     font-weight: 500;
     color: #8a2435;
     padding: 5px;
-    border-radius: 50%;
+    border-radius: 25 px;
 }
 header  ul li a:hover,
 header  ul li a.active
