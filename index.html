@@ -89,30 +89,24 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        document.onclick = function (e) {
-            e = e || window.event;
-            var element = e.target || e.srcElement;
-            if (element.innerHTML == "Image") {
-                //someFunction(element.href);
-                var name = element.nameProp;
-                var address = element.href;
-                saveImageAs1(element.nameProp, element.href);
-                return false; // Prevent default action and stop event propagation
-            }
-            else
-                return true;
-        };
-
-        function saveImageAs1(name, adress) {
-            if (confirm('you wanna save this image?')) {
-                window.win = open(adress);
-                //response.redirect("~/testpage.html");
-                setTimeout('win.document.execCommand("SaveAs")', 100);
-                setTimeout('win.close()', 500);
-            }
-        }
-    </script>
+    <script>
+      function forceDownload(url, fileName){
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", url, true);
+          xhr.responseType = "blob";
+          xhr.onload = function(){
+              var urlCreator = window.URL || window.webkitURL;
+              var imageUrl = urlCreator.createObjectURL(this.response);
+              var tag = document.createElement('a');
+              tag.href = imageUrl;
+              tag.download = fileName;
+              document.body.appendChild(tag);
+              tag.click();
+              document.body.removeChild(tag);
+          }
+          xhr.send();
+      }
+      </script>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
