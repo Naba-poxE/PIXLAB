@@ -51,7 +51,9 @@ class PhotoGallery{
         item.innerHTML = `
         <a id="abc" href='${photo.src.original}' target="_blank">
           <img src="${photo.src.medium}">
-          <h3 style="background-color: ${photo.avg_color};">${photo.photographer}</h3>
+          <h3 style="background-color: ${photo.avg_color}; cursor: pointer;" onclick="forceDownload('${photo.src.original}', 'nabaexpo_${photo.photographer_id}_pixles.jpeg');">
+         📥 Download 
+        </h3>
         </a>
         `;
         this.galleryDIv.appendChild(item)
