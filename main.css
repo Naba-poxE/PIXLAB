@@ -11,6 +11,13 @@ html{
 body{
   background-color: #DBE2E9;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
 img{
   width: 100%;
   height: 100%;
