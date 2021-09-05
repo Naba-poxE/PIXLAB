@@ -257,6 +257,7 @@ svg
         flex-direction: column;
         height: auto;
         padding: 20px;
+        width: 100%;
     }
     .container .content
     {
