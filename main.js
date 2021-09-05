@@ -1,31 +1,31 @@
 class PhotoGallery{
-    constructor(){
-      this.API_KEY = '563492ad6f917000010000019c9373be3b494c89b27cdf806d47c7ee';
-      this.galleryDIv = document.querySelector('.gallery');
-      this.searchForm = document.querySelector('.header_search form');
-      this.loadMore = document.querySelector('.load-more');
-      this.logo = document.querySelector('.logo')
+  constructor(){
+    this.API_KEY = '563492ad6f917000010000019c9373be3b494c89b27cdf806d47c7ee';
+    this.galleryDIv = document.querySelector('.gallery');
+    this.searchForm = document.querySelector('.header form');
+    this.loadMore = document.querySelector('.load-more');
+    this.logo = document.querySelector('.logo')
+    this.pageIndex = 1;
+    this.searchValueGlobal = '';
+    this.eventHandle();
+  }
+  eventHandle(){
+    document.addEventListener('DOMContentLoaded',()=>{
+      this.getImg(1);
+    });
+    this.searchForm.addEventListener('submit', (e)=>{
       this.pageIndex = 1;
-      this.searchValueGlobal = '';
-      this.eventHandle();
-    }
-    eventHandle(){
-      document.addEventListener('DOMContentLoaded',()=>{
-        this.getImg(1);
-      });
-      this.searchForm.addEventListener('submit', (e)=>{
-        this.pageIndex = 1;
-        this.getSearchedImages(e);
-      });
-      this.loadMore.addEventListener('click', (e)=>{
-        this.loadMoreImages(e);
-      })
-      this.logo.addEventListener('click',()=>{
-        this.pageIndex = 1;
-        this.galleryDIv.innerHTML = '';
-        this.getImg(this.pageIndex);
-      })
-    }
+      this.getSearchedImages(e);
+    });
+    this.loadMore.addEventListener('click', (e)=>{
+      this.loadMoreImages(e);
+    })
+    this.logo.addEventListener('click',()=>{
+      this.pageIndex = 1;
+      this.galleryDIv.innerHTML = '';
+      this.getImg(this.pageIndex);
+    })
+  }
     async getImg(index){
       this.loadMore.setAttribute('data-img', 'curated');
       const baseURL = `https://api.pexels.com/v1/curated?page=${index}&per_page=100`;
