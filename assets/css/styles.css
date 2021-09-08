@@ -281,7 +281,9 @@ body {
   width: 200px;
   border-radius: .5rem;
 }
-
+.container-fluid{
+  text-align:center;
+}
 /* ===== SKILLS =====*/
 .skills__container{
   row-gap: 2rem;
