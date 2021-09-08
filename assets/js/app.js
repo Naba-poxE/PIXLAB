@@ -95,6 +95,7 @@ class PhotoGallery{
           item.classList.add('col-sm-6');
           item.classList.add('col-md-4');
           item.classList.add('mb-3');
+          item.classList.add('work__img');
           item.innerHTML = `
             <a href="${photo.src.original}" class="fancybox" data-fancybox="gallery1" style="text-decoration: none; color:pink;">
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
@@ -114,6 +115,7 @@ class PhotoGallery{
           item.classList.add('col-sm-6');
           item.classList.add('col-md-4');
           item.classList.add('mb-3');
+          item.classList.add('work__img');
           item.innerHTML = `
             <a href="${photo.src.original}" class="fancybox" data-fancybox="gallery1" style="text-decoration: none; color:pink;">
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
@@ -133,6 +135,7 @@ class PhotoGallery{
           item.classList.add('col-sm-6');
           item.classList.add('col-md-4');
           item.classList.add('mb-3');
+          item.classList.add('work__img');
           item.innerHTML = `
             <a href="${photo.src.original}" class="fancybox" data-fancybox="gallery1" style="text-decoration: none; color:pink;">
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
