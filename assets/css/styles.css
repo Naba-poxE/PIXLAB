@@ -101,7 +101,9 @@ img{
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
-
+.fancybox-image{
+  border-radius: 1em;
+}
 /*===== LAYOUT =====*/
 .bd-grid{
   max-width: 1024px;
