@@ -412,10 +412,6 @@ body {
   body{
     margin: 0;
   }
-  .home__img{
-    bottom: calc(100% - 85%);
-    left: calc(100% - 85%);
-  }
   .section{
     padding-top: 4rem;
     padding-bottom: 3rem;
@@ -495,5 +491,11 @@ body {
   }
   .home__img{
     right: 10%;
+  }
+}
+@media screen and (min-width: 768px){
+  .home__img{
+    bottom: calc(100% - 85%);
+    left: calc(100% - 85%);
   }
 }
