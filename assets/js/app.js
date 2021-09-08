@@ -1,6 +1,6 @@
 class PhotoGallery{
     constructor(){
-      this.API_KEY = '563492ad6f917000010000019c9373be3b494c89b27cdf806d47c7ee';
+      this.API_KEY = '563492ad6f91700001000001b3541d437871492eab4ab743ffcd2046';
       this.galleryDIv = document.querySelector('.nabaexpo');
       this.galleryDIvnature = document.querySelector('.nabaexpo_nature');
       this.galleryDIvwork = document.querySelector('.nabaexpo_work');
