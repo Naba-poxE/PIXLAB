@@ -84,6 +84,7 @@ img{
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+  font-weight: 900;
 }
 .section-title::after{
   position: absolute;
