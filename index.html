@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Pixles Free Image</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Pixles</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Popular</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Nature</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Music</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        The <br>Best <span class="home__title-color">Free </span><br><span class="home__title_sub-color"> Stock Photos</span>   </h1>
+
+                        <form class="search_data contact__form">
+                            <div class="se_data_rc">
+                                <input type="text" placeholder="Search for free Photos" class="contact__input">
+                                <i class="bx  bx-search"></i>
+                            </div>
+                        </form>
+                </div>
+
+                <div class="home__social">
+                    <a href="" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="https://store.nabaexpo.org/media/user/pages/NJbpigITqeTIgZotOw6K6OzYj2vGSEea5rOzGFhG.png" alt="Naba-Expo">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section bd-grid" id="about">
+                <h2 class="section-title">Popular</h2>
+
+                <div class="container-fluid">
+                    <div class="row mt-4 nabaexpo">
+                        
+            
+                    </div>
+                    <a class="load-more_data load-more" data-img="curated">Load More</a>
+                </div>  
+            </section>
+            <!--===== Nature =====-->
+            <section class="about section bd-grid" id="skills">
+                <h2 class="section-title">Nature</h2>
+
+                <div class="container-fluid">
+                    <div class="row mt-4 nabaexpo_nature">
+                        
+            
+                    </div>
+                </div>  
+            </section>
+            <!--===== Work =====-->
+            <section class="about section bd-grid" id="work">
+                <h2 class="section-title">Productivity</h2>
+
+                <div class="container-fluid">
+                    <div class="row mt-4 nabaexpo_work">
+                        
+            
+                    </div>
+                </div>  
+            </section>
+            <!--===== Music =====-->
+            <section class="about section bd-grid" id="work">
+                <h2 class="section-title">Music</h2>
+
+                <div class="container-fluid">
+                    <div class="row mt-4 nabaexpo_music">
+                        
+            
+                    </div>
+                </div>  
+            </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Pixles</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p> Naba-Expo Enterprise &#169; 2021. All rights reserved.</p>
+        </footer>
+
+        
+
+        <!--===== Downloads Images ======-->
+        <script>
+            function forceDownload(url, fileName){
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.responseType = "blob";
+                xhr.onload = function(){
+                    var urlCreator = window.URL || window.webkitURL;
+                    var imageUrl = urlCreator.createObjectURL(this.response);
+                    var tag = document.createElement('a');
+                    tag.href = imageUrl;
+                    tag.download = fileName;
+                    document.body.appendChild(tag);
+                    tag.click();
+                    document.body.removeChild(tag);
+                }
+                xhr.send();
+            }
+        </script>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        
+        <!--===== APP JS =====-->  
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+</html>
