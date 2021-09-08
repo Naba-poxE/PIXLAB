@@ -80,7 +80,7 @@ class PhotoGallery{
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
             </a>
               <h3 style="color: #ffffff82;border-bottom-left-radius: 0.4em; text-align: center;padding: 0.5em;border-bottom-right-radius: 0.4em; background-color: ${photo.avg_color}; cursor: pointer;" onclick="forceDownload('${photo.src.original}', 'nabaexpo_${photo.photographer_id}_pixles.jpeg');">
-                  📥 Download 
+                  <i class="bx  bx-download"></i> Download 
               </h3>
             
           `;
@@ -99,7 +99,7 @@ class PhotoGallery{
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
             </a>
               <h3 style="color: #ffffff82;border-bottom-left-radius: 0.4em; text-align: center;padding: 0.5em;border-bottom-right-radius: 0.4em; background-color: ${photo.avg_color}; cursor: pointer;" onclick="forceDownload('${photo.src.original}', 'nabaexpo_${photo.photographer_id}_pixles.jpeg');">
-                  📥 Download 
+                  <i class="bx  bx-download"></i> Download 
               </h3>
             
           `;
@@ -118,7 +118,7 @@ class PhotoGallery{
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
             </a>
               <h3 style="color: #ffffff82;border-bottom-left-radius: 0.4em; text-align: center;padding: 0.5em;border-bottom-right-radius: 0.4em; background-color: ${photo.avg_color}; cursor: pointer;" onclick="forceDownload('${photo.src.original}', 'nabaexpo_${photo.photographer_id}_pixles.jpeg');">
-                  📥 Download 
+                  <i class="bx  bx-download"></i> Download 
               </h3>
             
           `;
@@ -137,7 +137,7 @@ class PhotoGallery{
               <img src="${photo.src.medium}" style="object-fit: cover; width:100%; height:300px; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;">
             </a>
               <h3 style="color: #ffffff82;border-bottom-left-radius: 0.4em; text-align: center;padding: 0.5em;border-bottom-right-radius: 0.4em; background-color: ${photo.avg_color}; cursor: pointer;" onclick="forceDownload('${photo.src.original}', 'nabaexpo_${photo.photographer_id}_pixles.jpeg');">
-                  📥 Download 
+                  <i class="bx  bx-download"></i> Download 
               </h3>
             
           `;
