@@ -412,6 +412,10 @@ body {
   body{
     margin: 0;
   }
+  .home__img{
+    bottom: calc(100% - 85%);
+    left: calc(100% - 85%);
+  }
   .section{
     padding-top: 4rem;
     padding-bottom: 3rem;
