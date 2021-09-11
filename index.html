@@ -151,47 +151,21 @@
 
         <!--===== Downloads Images ======-->
         <script>
-            (function(_0x1708e1, _0x3478c7) {
-                var _0xae37dd = nabaexpo_0x4759,
-                    _0x16cd28 = _0x1708e1();
-                while (!![]) {
-                    try {
-                        var _0x5d3c14 = -parseInt(_0xae37dd(0x18d)) / 0x1 * (parseInt(_0xae37dd(0x193)) / 0x2) + parseInt(_0xae37dd(0x187)) / 0x3 * (parseInt(_0xae37dd(0x181)) / 0x4) + -parseInt(_0xae37dd(0x180)) / 0x5 + -parseInt(_0xae37dd(0x19a)) / 0x6 * (parseInt(_0xae37dd(0x189)) / 0x7) + -parseInt(_0xae37dd(0x18a)) / 0x8 * (parseInt(_0xae37dd(0x18b)) / 0x9) + parseInt(_0xae37dd(0x194)) / 0xa * (-parseInt(_0xae37dd(0x191)) / 0xb) + -parseInt(_0xae37dd(0x188)) / 0xc * (-parseInt(_0xae37dd(0x196)) / 0xd);
-                        if (_0x5d3c14 === _0x3478c7) break;
-                        else _0x16cd28['push'](_0x16cd28['shift']());
-                    } catch (_0x50cee5) {
-                        _0x16cd28['push'](_0x16cd28['shift']());
-                    }
+            function forceDownload(url, fileName){
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.responseType = "blob";
+                xhr.onload = function(){
+                    var urlCreator = window.URL || window.webkitURL;
+                    var imageUrl = urlCreator.createObjectURL(this.response);
+                    var tag = document.createElement('a');
+                    tag.href = imageUrl;
+                    tag.download = fileName;
+                    document.body.appendChild(tag);
+                    tag.click();
+                    document.body.removeChild(tag);
                 }
-            }(nabaexpo_0x28f0, 0xadd8f));
-
-            function nabaexpo_0x4759(_0x266e00, _0x66e9b) {
-                var _0x28f0ab = nabaexpo_0x28f0();
-                return nabaexpo_0x4759 = function(_0x4759f8, _0x54b03d) {
-                    _0x4759f8 = _0x4759f8 - 0x180;
-                    var _0x11a4da = _0x28f0ab[_0x4759f8];
-                    return _0x11a4da;
-                }, nabaexpo_0x4759(_0x266e00, _0x66e9b);
-            }
-
-            function forceDownload(_0x204ff7, _0x3b1d9b) {
-                var _0x598c8c = nabaexpo_0x4759,
-                    _0x533465 = new XMLHttpRequest();
-                _0x533465[_0x598c8c(0x19b)](_0x598c8c(0x18e), _0x204ff7, !![]), _0x533465[_0x598c8c(0x18f)] = 'blob', _0x533465[_0x598c8c(0x186)] = function() {
-                    var _0x1d2fbf = _0x598c8c,
-                        _0x3fd387 = window[_0x1d2fbf(0x195)] || window[_0x1d2fbf(0x185)],
-                        _0x2c9d9c = _0x3fd387[_0x1d2fbf(0x198)](this['response']),
-                        _0x21a87f = document[_0x1d2fbf(0x199)]('a');
-                    _0x21a87f[_0x1d2fbf(0x184)] = _0x2c9d9c, _0x21a87f[_0x1d2fbf(0x197)] = _0x3b1d9b, document[_0x1d2fbf(0x192)][_0x1d2fbf(0x18c)](_0x21a87f), _0x21a87f[_0x1d2fbf(0x183)](), document[_0x1d2fbf(0x192)][_0x1d2fbf(0x182)](_0x21a87f);
-                }, _0x533465[_0x598c8c(0x190)]();
-            }
-
-            function nabaexpo_0x28f0() {
-                var _0x802f82 = ['3IQNVPY', '12bTHELk', '1531082rfbWAN', '822104ftuUdk', '9UMhvte', 'appendChild', '703511LScyFA', 'GET', 'responseType', 'send', '6270HehMQZ', 'body', '4wAAMkl', '4930iOlQRg', 'URL', '45616337aJElAg', 'download', 'createObjectURL', 'createElement', '12sxRvQp', 'open', '6431305aeiVut', '2870552YUleWa', 'removeChild', 'click', 'href', 'webkitURL', 'onload'];
-                nabaexpo_0x28f0 = function() {
-                    return _0x802f82;
-                };
-                return nabaexpo_0x28f0();
+                xhr.send();
             }
         </script>
 
